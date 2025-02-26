@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const adsWall = document.getElementById("ads-wall");
-    const selectButtons = document.querySelectorAll(".select-plan");
     
     function createAd(size, text) {
         const ad = document.createElement("div");
@@ -8,19 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
         ad.textContent = text;
         ad.addEventListener("mouseover", function () {
             ad.style.transform = "scale(1.1)";
-            ad.style.transition = "transform 0.3s ease-in-out";
+            ad.style.transition = "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out";
+            ad.style.boxShadow = "0px 4px 15px rgba(255, 255, 255, 0.5)";
         });
         ad.addEventListener("mouseleave", function () {
             ad.style.transform = "scale(1)";
+            ad.style.boxShadow = "none";
         });
         return ad;
     }
     
-    selectButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const size = button.parentElement.dataset.size;
-            const text = "Nuevo Anuncio " + size.charAt(0).toUpperCase() + size.slice(1);
-            adsWall.appendChild(createAd(size, text));
-        });
+    const adTypes = ["small", "medium", "large", "mobile", "tablet"];
+    adTypes.forEach((type, index) => {
+        adsWall.appendChild(createAd(type, `Anuncio ${type.charAt(0).toUpperCase() + type.slice(1)}`));
     });
 });
