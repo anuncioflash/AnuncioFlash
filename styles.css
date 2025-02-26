@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background-spiral.jpg') no-repeat center center fixed;
+    background: url('background-interactive.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #e0e0e0;
     display: flex;
@@ -12,7 +12,7 @@ body {
 
 header {
     text-align: center;
-    background: rgba(255, 123, 0, 0.8);
+    background: rgba(50, 50, 150, 0.8);
     color: white;
     padding: 15px;
     font-size: 1.5em;
@@ -28,7 +28,7 @@ header {
 
 .side-menu {
     width: 200px;
-    background-color: #ff7b00;
+    background: linear-gradient(135deg, #0057ff, #00a8ff);
     padding: 20px;
     height: 100vh;
     border-top-right-radius: 50px;
@@ -39,35 +39,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.side-menu ul {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.side-menu ul li {
-    margin: 15px 0;
-}
-
-.side-menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    display: block;
-    padding: 12px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #ff512f, #dd2476);
-    transition: 0.3s;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.side-menu ul li a:hover {
-    background: linear-gradient(135deg, #dd2476, #ff512f);
-    transform: scale(1.1);
 }
 
 #ads-wall {
