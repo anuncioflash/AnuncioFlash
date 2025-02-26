@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnuncioFlash</title>
+    <title>AnuncioFlash - Publicidad Dinámica</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
@@ -13,24 +13,39 @@
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Anuncios</a></li>
+                <li><a href="#">Planes</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section id="pricing">
+            <h2>Selecciona el Tamaño de tu Anuncio</h2>
+            <div class="plans">
+                <div class="plan" data-size="pequeño" data-price="$10">
+                    <h3>Pequeño</h3>
+                    <p>$10 / mes</p>
+                    <button class="select-plan">Seleccionar</button>
+                </div>
+                <div class="plan" data-size="mediano" data-price="$25">
+                    <h3>Mediano</h3>
+                    <p>$25 / mes</p>
+                    <button class="select-plan">Seleccionar</button>
+                </div>
+                <div class="plan" data-size="grande" data-price="$50">
+                    <h3>Grande</h3>
+                    <p>$50 / mes</p>
+                    <button class="select-plan">Seleccionar</button>
+                </div>
+            </div>
+        </section>
         <section id="ads-wall">
-            <div class="ad">Anuncio 1</div>
-            <div class="ad">Anuncio 2</div>
-            <div class="ad">Anuncio 3</div>
-            <div class="ad">Anuncio 4</div>
-            <div class="ad">Anuncio 5</div>
-            <div class="ad">Anuncio 6</div>
+            <h2>Anuncios</h2>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Muro Publicitario. Todos los derechos reservados.</p>
+        <p>&copy; 2025 AnuncioFlash. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
