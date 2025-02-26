@@ -8,14 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>AnuncioFlash</h1>
-        <p>Tu empresa, vista por miles</p>
+        <div class="logo">AnuncioFlash</div>
+        <nav>
+            <ul>
+                <li><a href="#publicar">Publicar</a></li>
+                <li><a href="#anuncios">Anuncios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
     
+    <section id="hero">
+        <h1>Tu empresa, vista por miles</h1>
+        <p>Publica tus anuncios y alcanza a miles de personas en segundos.</p>
+        <button onclick="mostrarFormulario()">Publicar Anuncio</button>
+    </section>
+    
     <main>
-        <section id="publicar">
+        <section id="publicar" class="contenido">
             <h2>Publica tu Anuncio</h2>
-            <button onclick="mostrarFormulario()">Crear Anuncio</button>
             <div id="formulario-anuncio" class="hidden">
                 <input type="text" id="titulo-anuncio" placeholder="Título del anuncio">
                 <textarea id="descripcion-anuncio" placeholder="Descripción"></textarea>
@@ -23,9 +34,9 @@
             </div>
         </section>
         
-        <section id="anuncios">
+        <section id="anuncios" class="contenido">
             <h2>Anuncios Recientes</h2>
-            <div id="lista-anuncios"></div>
+            <div id="lista-anuncios" class="grid-anuncios"></div>
         </section>
     </main>
     
