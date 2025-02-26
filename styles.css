@@ -70,7 +70,7 @@ header {
 #ads-wall {
     margin-left: 220px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 15px;
     padding: 30px;
     justify-content: center;
@@ -85,10 +85,23 @@ header {
     font-weight: bold;
     transition: transform 0.3s;
     cursor: pointer;
+    background-color: var(--ad-color);
 }
 
 .ad:hover {
     transform: scale(1.05);
+}
+
+.ad.phone {
+    width: 120px;
+    height: 220px;
+    background: url('phone-mockup.png') no-repeat center/cover;
+}
+
+.ad.tablet {
+    width: 180px;
+    height: 280px;
+    background: url('tablet-mockup.png') no-repeat center/cover;
 }
 
 footer {
