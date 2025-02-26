@@ -2,19 +2,23 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #222;
+    color: white;
 }
 
 header {
-    background-color: #333;
+    background-color: #ff6600;
     color: white;
     padding: 20px;
     text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -25,6 +29,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 #ads-wall {
@@ -32,17 +37,31 @@ nav ul li a {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    background-color: #333;
 }
 
 .ad {
-    background-color: white;
+    background-color: #ffcc00;
+    color: black;
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
 }
 
 .ad:hover {
     transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.ad {
+    animation: fadeIn 1s ease-in;
 }
