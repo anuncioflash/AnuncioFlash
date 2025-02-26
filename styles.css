@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+header {
+    background: linear-gradient(90deg, #ff7b00, #ffcc00);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#ads-wall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    background-color: #0f3460;
+}
+
+.ad {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: white;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.ad:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.ad {
+    animation: fadeIn 1s ease-in;
+}
