@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnuncioFlash - Publica y Descubre Anuncios</title>
+    <title>AnuncioFlash - Publicidad Dinámica</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,8 +22,8 @@
     </header>
     
     <section id="hero">
-        <h1>Tu Publicidad al Instante</h1>
-        <p>Publica tus anuncios y alcanza miles de personas rápidamente.</p>
+        <h1>Promociona tu negocio al instante</h1>
+        <p>Publica anuncios de cualquier tamaño y elige la mejor opción de pago.</p>
         <button onclick="mostrarFormulario()">Publicar Anuncio</button>
     </section>
     
@@ -39,6 +39,11 @@
                     <option value="servicio">Servicio</option>
                 </select>
                 <input type="file" id="imagen-anuncio">
+                <select id="tamano-anuncio">
+                    <option value="pequeno">Anuncio Pequeño - 5€</option>
+                    <option value="mediano">Anuncio Mediano - 10€</option>
+                    <option value="grande">Anuncio Grande - 20€</option>
+                </select>
                 <button onclick="guardarAnuncio()">Guardar Anuncio</button>
             </div>
         </section>
@@ -50,7 +55,7 @@
 
         <section id="tarifas" class="contenido">
             <h2>Tarifas y Pagos</h2>
-            <p>Escoge el tipo de anuncio y paga con PayPal o Bizum.</p>
+            <p>Elige el tamaño de tu anuncio y paga con PayPal o Bizum.</p>
             <button onclick="procesarPago('paypal')">Pagar con PayPal</button>
             <button onclick="procesarPago('bizum')">Pagar con Bizum</button>
         </section>
