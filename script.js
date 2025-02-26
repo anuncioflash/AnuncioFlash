@@ -17,8 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
         return ad;
     }
     
-    const adTypes = ["small", "medium", "large", "mobile", "tablet"];
-    adTypes.forEach((type, index) => {
-        adsWall.appendChild(createAd(type, `Anuncio ${type.charAt(0).toUpperCase() + type.slice(1)}`));
-    });
+    function generateAds(amount) {
+        const adTypes = ["small", "medium", "large", "mobile", "tablet"];
+        for (let i = 0; i < amount; i++) {
+            const type = adTypes[i % adTypes.length];
+            adsWall.appendChild(createAd(type, `Anuncio ${type.charAt(0).toUpperCase() + type.slice(1)}`));
+        }
+    }
+    
+    generateAds(30);
 });
