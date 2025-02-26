@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const adsWall = document.getElementById("ads-wall");
     
-    function createAd(size, text, customClass) {
+    function createAd(size, customClass) {
         const ad = document.createElement("div");
         ad.classList.add("ad", size, customClass);
-        ad.textContent = text;
         ad.style.backgroundColor = getRandomColor();
         ad.addEventListener("mouseover", function () {
             ad.style.transform = "scale(1.1)";
@@ -24,12 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     function generateAds(amount) {
-        const adTypes = ["small", "medium", "large"];
-        const customTypes = ["", "phone", "tablet"];
+        const adTypes = ["small", "medium", "large", "phone", "tablet"];
         for (let i = 0; i < amount; i++) {
             const type = adTypes[i % adTypes.length];
-            const custom = customTypes[i % customTypes.length];
-            adsWall.appendChild(createAd(type, "", custom));
+            adsWall.appendChild(createAd(type, type));
         }
     }
     
