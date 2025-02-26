@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnuncioFlash - Tu empresa, vista por miles</title>
+    <title>AnuncioFlash - Publica y Descubre Anuncios</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,15 +13,19 @@
     </header>
     
     <main>
-        <h2>Bienvenido a AnuncioFlash</h2>
-        <p>Publica y encuentra anuncios fácilmente.</p>
-        <button onclick="mostrarMensaje()">Publicar Anuncio</button>
+        <section id="publicar">
+            <h2>Publica tu Anuncio</h2>
+            <button onclick="mostrarFormulario()">Crear Anuncio</button>
+            <div id="formulario-anuncio" class="hidden">
+                <input type="text" id="titulo-anuncio" placeholder="Título del anuncio">
+                <textarea id="descripcion-anuncio" placeholder="Descripción"></textarea>
+                <button onclick="guardarAnuncio()">Guardar Anuncio</button>
+            </div>
+        </section>
         
         <section id="anuncios">
-            <h3>Anuncios Recientes</h3>
-            <div class="anuncio">📢 Anuncio 1: Oferta especial en tecnología</div>
-            <div class="anuncio">🏡 Anuncio 2: Venta de casa en Madrid</div>
-            <div class="anuncio">🚗 Anuncio 3: Coche en excelente estado</div>
+            <h2>Anuncios Recientes</h2>
+            <div id="lista-anuncios"></div>
         </section>
     </main>
     
