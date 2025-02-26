@@ -11,16 +11,19 @@
         <div class="logo">AnuncioFlash</div>
         <nav>
             <ul>
+                <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#publicar">Publicar</a></li>
                 <li><a href="#anuncios">Anuncios</a></li>
+                <li><a href="#tarifas">Tarifas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
     </header>
     
     <section id="hero">
-        <h1>La Plataforma #1 para Publicidad Rápida</h1>
-        <p>Publica tus anuncios en segundos y alcanza miles de personas.</p>
+        <h1>Tu Publicidad al Instante</h1>
+        <p>Publica tus anuncios y alcanza miles de personas rápidamente.</p>
         <button onclick="mostrarFormulario()">Publicar Anuncio</button>
     </section>
     
@@ -30,18 +33,36 @@
             <div id="formulario-anuncio" class="hidden">
                 <input type="text" id="titulo-anuncio" placeholder="Título del anuncio">
                 <textarea id="descripcion-anuncio" placeholder="Descripción"></textarea>
+                <select id="categoria-anuncio">
+                    <option value="compra">Compra</option>
+                    <option value="venta">Venta</option>
+                    <option value="servicio">Servicio</option>
+                </select>
+                <input type="file" id="imagen-anuncio">
                 <button onclick="guardarAnuncio()">Guardar Anuncio</button>
             </div>
         </section>
         
         <section id="anuncios" class="contenido">
-            <h2>Anuncios Destacados</h2>
+            <h2>Anuncios Recientes</h2>
             <div id="lista-anuncios" class="grid-anuncios"></div>
+        </section>
+
+        <section id="tarifas" class="contenido">
+            <h2>Tarifas y Pagos</h2>
+            <p>Escoge el tipo de anuncio y paga con PayPal o Bizum.</p>
+            <button onclick="procesarPago('paypal')">Pagar con PayPal</button>
+            <button onclick="procesarPago('bizum')">Pagar con Bizum</button>
         </section>
     </main>
     
     <footer>
         <p>&copy; 2024 AnuncioFlash - Todos los derechos reservados</p>
+        <ul>
+            <li><a href="#politicas">Política de Privacidad</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+            <li><a href="#seguridad">Seguridad</a></li>
+        </ul>
     </footer>
     
     <script src="index.js"></script>

@@ -5,11 +5,12 @@ function mostrarFormulario() {
 function guardarAnuncio() {
     const titulo = document.getElementById('titulo-anuncio').value;
     const descripcion = document.getElementById('descripcion-anuncio').value;
-    
+    const categoria = document.getElementById('categoria-anuncio').value;
+
     if (titulo && descripcion) {
         const anuncio = document.createElement('div');
         anuncio.classList.add('anuncio');
-        anuncio.innerHTML = `<h3>${titulo}</h3><p>${descripcion}</p>`;
+        anuncio.innerHTML = `<h3>${titulo}</h3><p>${descripcion}</p><small>Categoría: ${categoria}</small>`;
 
         document.getElementById('lista-anuncios').appendChild(anuncio);
 
@@ -18,4 +19,8 @@ function guardarAnuncio() {
     } else {
         alert('Por favor, completa todos los campos.');
     }
+}
+
+function procesarPago(metodo) {
+    alert(`Procesando pago con ${metodo}. Esta función se integrará pronto.`);
 }
