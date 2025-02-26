@@ -2,8 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background-interactive.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: linear-gradient(135deg, #121212, #1a1a2e);
     color: #e0e0e0;
     display: flex;
     flex-direction: column;
@@ -44,7 +43,7 @@ header {
 #ads-wall {
     margin-left: 220px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
     padding: 30px;
     justify-content: center;
@@ -61,10 +60,13 @@ h2 {
     text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
 }
 
-footer {
+#payment-section {
     text-align: center;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.8);
-    font-size: 1em;
-    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
