@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const ad = document.createElement("div");
         ad.classList.add("ad", size, customClass);
         ad.textContent = text;
-        ad.style.setProperty('--ad-color', getRandomColor());
+        ad.style.backgroundColor = getRandomColor();
         ad.addEventListener("mouseover", function () {
             ad.style.transform = "scale(1.1)";
             ad.style.transition = "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out";
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < amount; i++) {
             const type = adTypes[i % adTypes.length];
             const custom = customTypes[i % customTypes.length];
-            adsWall.appendChild(createAd(type, `Anuncio ${type.charAt(0).toUpperCase() + type.slice(1)}`, custom));
+            adsWall.appendChild(createAd(type, "", custom));
         }
     }
     
