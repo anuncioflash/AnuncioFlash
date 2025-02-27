@@ -1,45 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const adsWall = document.getElementById("ads-wall");
-    const paymentSection = document.getElementById("payment-section");
-    
-    paymentSection.innerHTML = `
-        <h2>Selecciona tu Anuncio</h2>
-        <form id="payment-form">
-            <label>
-                <input type="radio" name="adSize" value="small" data-price="10"> Bloque Pequeño - 10€
-            </label>
-            <label>
-                <input type="radio" name="adSize" value="medium" data-price="20"> Bloque Mediano - 20€
-            </label>
-            <label>
-                <input type="radio" name="adSize" value="large" data-price="30"> Bloque Grande - 30€
-            </label>
-            <br>
-            <button id="paypal-button">Pagar con PayPal</button>
-            <button id="bizum-button">Pagar con Bizum</button>
-        </form>
-    `;
+    const adContainer = document.getElementById("ad-container");
 
-    document.querySelectorAll(".side-menu ul li a").forEach(link => {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: "smooth" });
+    function createAd(size, label) {
+        const ad = document.createElement("div");
+        ad.classList.add("ad", size);
+        ad.textContent = label;
+        ad.addEventListener("mouseover", function () {
+            ad.style.transform = "scale(1.1)";
+            ad.style.boxShadow = "0px 4px 15px rgba(255, 255, 255, 0.5)";
+        });
+        ad.addEventListener("mouseleave", function () {
+            ad.style.transform = "scale(1)";
+            ad.style.boxShadow = "none";
+        });
+        return ad;
+    }
+
+    function generateAds() {
+        const adTypes = [
+            { size: "small", label: "Anuncio Pequeño" },
+            { size: "medium", label: "Anuncio Mediano" },
+            { size: "large", label: "Anuncio Grande" }
+        ];
+        
+        adTypes.forEach(type => {
+            for (let i = 0; i < 5; i++) {
+                adContainer.appendChild(createAd(type.size, type.label));
             }
         });
-    });
+    }
+
+    generateAds();
 
     document.getElementById("paypal-button").addEventListener("click", function(event) {
         event.preventDefault();
         alert("Redirigiendo a PayPal...");
-        // Aquí se integraría la API de PayPal
     });
-    
+
     document.getElementById("bizum-button").addEventListener("click", function(event) {
         event.preventDefault();
         alert("Redirigiendo a Bizum...");
-        // Aquí se integraría la API de Bizum
     });
 });

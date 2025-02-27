@@ -3,28 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnuncioFlash - Tu Publicidad en el Mejor Lugar</title>
+    <title>AnuncioFlash - Tu Espacio Publicitario</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>AnuncioFlash</h1>
-        <p class="slogan">Tu negocio a la vista de miles.</p>
+        <p class="slogan">Compra tu espacio, llega a miles de personas.</p>
     </header>
     <nav class="side-menu">
         <ul>
-            <li><a href="#inicio">🏠 Inicio</a></li>
-            <li><a href="#planes">💼 Planes</a></li>
+            <li><a href="#">🏠 Inicio</a></li>
+            <li><a href="#comprar">💰 Comprar Espacio</a></li>
             <li><a href="#contacto">📞 Contacto</a></li>
             <li><a href="#ayuda">❓ Ayuda</a></li>
         </ul>
     </nav>
     <main>
         <section id="ads-wall">
-            <h2>Explora los Anuncios</h2>
+            <h2>Muro Publicitario</h2>
+            <div id="ad-container"></div>
         </section>
-        <div id="payment-section"></div>
+        <div id="payment-section">
+            <h2>Selecciona tu Bloque</h2>
+            <form id="payment-form">
+                <label>
+                    <input type="radio" name="adSize" value="small" data-price="10"> Bloque Pequeño - 10€
+                </label>
+                <label>
+                    <input type="radio" name="adSize" value="medium" data-price="20"> Bloque Mediano - 20€
+                </label>
+                <label>
+                    <input type="radio" name="adSize" value="large" data-price="30"> Bloque Grande - 30€
+                </label>
+                <br>
+                <button id="paypal-button">Pagar con PayPal</button>
+                <button id="bizum-button">Pagar con Bizum</button>
+            </form>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 AnuncioFlash. Tu espacio publicitario digital.</p>

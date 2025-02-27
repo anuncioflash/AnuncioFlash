@@ -7,22 +7,17 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    text-align: center;
 }
 
 header {
     text-align: center;
-    background: rgba(50, 50, 150, 0.8);
+    background: linear-gradient(90deg, #ff512f, #dd2476);
     color: white;
-    padding: 15px;
-    font-size: 1.5em;
+    padding: 20px;
+    font-size: 1.8em;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.slogan {
-    font-size: 1em;
-    font-weight: normal;
-    margin-top: 5px;
 }
 
 .side-menu {
@@ -43,14 +38,12 @@ header {
 #ads-wall {
     margin-left: 240px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
     padding: 30px;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: #0f3460;
     width: calc(100% - 240px);
-    min-height: 500px;
-    border-radius: 15px;
 }
 
 .ad {
@@ -60,23 +53,39 @@ header {
     font-weight: bold;
     transition: transform 0.3s, background-color 0.3s;
     cursor: pointer;
+    background-color: var(--ad-color, #ff512f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-size: 1.2em;
 }
-
-.ad.small { background-color: #ff512f; width: 150px; height: 100px; }
-.ad.medium { background-color: #ffcc00; width: 200px; height: 150px; }
-.ad.large { background-color: #32ff7e; width: 250px; height: 200px; }
 
 .ad:hover {
     transform: scale(1.1);
 }
 
+.ad.small {
+    width: 100px;
+    height: 100px;
+    background: #ff512f;
+}
+
+.ad.medium {
+    width: 150px;
+    height: 150px;
+    background: #ffcc00;
+}
+
+.ad.large {
+    width: 200px;
+    height: 200px;
+    background: #32ff7e;
+}
+
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.8);
-    font-size: 1em;
-    width: 100%;
-    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    margin-top: auto;
 }
