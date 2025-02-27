@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const adContainer = document.getElementById("ad-container");
 
-    function createAd(size, label) {
+    function createAd(size, label, customClass) {
         const ad = document.createElement("div");
-        ad.classList.add("ad", size);
+        ad.classList.add("ad", size, customClass);
         ad.textContent = label;
         ad.addEventListener("mouseover", function () {
             ad.style.transform = "scale(1.1)";
@@ -20,25 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const adTypes = [
             { size: "small", label: "Anuncio Pequeño" },
             { size: "medium", label: "Anuncio Mediano" },
-            { size: "large", label: "Anuncio Grande" }
+            { size: "large", label: "Anuncio Grande" },
+            { size: "large", label: "Ejemplo Empresa", customClass: "sample" }
         ];
         
         adTypes.forEach(type => {
-            for (let i = 0; i < 5; i++) {
-                adContainer.appendChild(createAd(type.size, type.label));
+            for (let i = 0; i < 10; i++) {
+                adContainer.appendChild(createAd(type.size, type.label, type.customClass || ""));
             }
         });
     }
 
     generateAds();
-
-    document.getElementById("paypal-button").addEventListener("click", function(event) {
-        event.preventDefault();
-        alert("Redirigiendo a PayPal...");
-    });
-
-    document.getElementById("bizum-button").addEventListener("click", function(event) {
-        event.preventDefault();
-        alert("Redirigiendo a Bizum...");
-    });
 });

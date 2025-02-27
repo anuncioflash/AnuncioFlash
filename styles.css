@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #121212, #1a1a2e);
+    background: #000;
     color: #e0e0e0;
     display: flex;
     flex-direction: column;
@@ -12,75 +12,50 @@ body {
 
 header {
     text-align: center;
-    background: linear-gradient(90deg, #ff512f, #dd2476);
+    background: linear-gradient(90deg, #ff512f, #ff7b00);
     color: white;
-    padding: 20px;
-    font-size: 1.8em;
+    padding: 25px;
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.side-menu {
-    width: 220px;
-    background: linear-gradient(135deg, #ff512f, #dd2476);
-    padding: 20px;
-    height: 100vh;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #ads-wall {
-    margin-left: 240px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
-    padding: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 5px;
+    padding: 20px;
     justify-content: center;
-    background-color: #0f3460;
-    width: calc(100% - 240px);
+    background: #111;
+    width: 100%;
+    min-height: 500px;
 }
 
 .ad {
-    padding: 20px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 5px;
     text-align: center;
     font-weight: bold;
     transition: transform 0.3s, background-color 0.3s;
     cursor: pointer;
-    background-color: var(--ad-color, #ff512f);
+    color: white;
+    font-size: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.2em;
+    border: 1px solid #fff;
 }
 
 .ad:hover {
     transform: scale(1.1);
-}
-
-.ad.small {
-    width: 100px;
-    height: 100px;
-    background: #ff512f;
-}
-
-.ad.medium {
-    width: 150px;
-    height: 150px;
     background: #ffcc00;
+    color: #000;
 }
 
-.ad.large {
-    width: 200px;
-    height: 200px;
-    background: #32ff7e;
+.ad.sample {
+    background: #00aaff;
+    color: #fff;
+    font-size: 0.9em;
 }
 
 footer {
@@ -88,4 +63,6 @@ footer {
     padding: 20px;
     background-color: #222;
     margin-top: auto;
+    font-size: 1em;
+    width: 100%;
 }
